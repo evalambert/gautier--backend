@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_paragraph_work_phases",
+  "info": {
+    "displayName": "Work phase"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Duration": {
+      "type": "string"
+    }
+  }
+}
