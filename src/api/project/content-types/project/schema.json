@@ -10,21 +10,27 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "Title": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {}
     },
     "Place": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {}
     },
     "Year": {
-      "type": "biginteger"
+      "type": "biginteger",
+      "pluginOptions": {}
     },
     "Area": {
-      "type": "integer"
+      "type": "integer",
+      "pluginOptions": {}
     },
     "Description": {
-      "type": "text"
+      "type": "text",
+      "pluginOptions": {}
     },
     "Media": {
       "type": "media",
@@ -35,7 +41,8 @@
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "pluginOptions": {}
     },
     "Blueprint": {
       "type": "media",
@@ -46,15 +53,21 @@
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "pluginOptions": {}
     },
     "Credit": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {}
     },
     "Typologie": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::typologie.typologie"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
     }
   }
 }

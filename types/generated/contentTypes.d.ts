@@ -380,71 +380,22 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
   attributes: {
-    Adress: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    Bio: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    Adress: Schema.Attribute.String;
+    Bio: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    CurrentCollab: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    CurrentInterne: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    Email: Schema.Attribute.Email &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    Instagram: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'>;
-    PastCollab: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    PastInterne: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    Phone: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    CurrentCollab: Schema.Attribute.Text;
+    CurrentInterne: Schema.Attribute.Text;
+    Email: Schema.Attribute.Email;
+    Instagram: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
+      Schema.Attribute.Private;
+    PastCollab: Schema.Attribute.Text;
+    PastInterne: Schema.Attribute.Text;
+    Phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -512,6 +463,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     >;
     Place: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    Slug: Schema.Attribute.UID<'Title'>;
     Title: Schema.Attribute.String;
     Typologie: Schema.Attribute.Relation<
       'oneToOne',
@@ -527,6 +479,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
 export interface ApiTypologieTypologie extends Struct.CollectionTypeSchema {
   collectionName: 'typologies';
   info: {
+    description: '';
     displayName: 'Typologie';
     pluralName: 'typologies';
     singularName: 'typologie';

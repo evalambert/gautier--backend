@@ -4,14 +4,17 @@
   "info": {
     "singularName": "typologie",
     "pluralName": "typologies",
-    "displayName": "Typologie"
+    "displayName": "Typologie",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "Name": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {}
     }
   }
 }
