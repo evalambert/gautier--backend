@@ -437,7 +437,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
     description: '';
-    displayName: 'project';
+    displayName: 'Project';
     pluralName: 'projects';
     singularName: 'project';
   };
