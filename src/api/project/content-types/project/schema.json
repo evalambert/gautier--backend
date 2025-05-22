@@ -16,13 +16,16 @@
       "type": "string",
       "pluginOptions": {}
     },
-    "Place": {
+    "City": {
       "type": "string",
-      "pluginOptions": {}
+      "pluginOptions": {},
+      "required": false
     },
     "Year": {
       "type": "biginteger",
-      "pluginOptions": {}
+      "pluginOptions": {},
+      "max": "4",
+      "min": "4"
     },
     "Area": {
       "type": "integer",
@@ -67,7 +70,11 @@
     },
     "Slug": {
       "type": "uid",
-      "targetField": "Title"
+      "targetField": "Title",
+      "required": true
+    },
+    "District": {
+      "type": "string"
     }
   }
 }
