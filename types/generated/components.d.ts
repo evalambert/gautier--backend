@@ -1,9 +1,9 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface ParagraphWorkPhase extends Struct.ComponentSchema {
-  collectionName: 'components_paragraph_work_phases';
+export interface WorkPhaseWorkPhase extends Struct.ComponentSchema {
+  collectionName: 'components_work_phase_work_phases';
   info: {
-    displayName: 'Work phase';
+    displayName: 'WorkPhase';
   };
   attributes: {
     Description: Schema.Attribute.Text;
@@ -15,7 +15,7 @@ export interface ParagraphWorkPhase extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'paragraph.work-phase': ParagraphWorkPhase;
+      'work-phase.work-phase': WorkPhaseWorkPhase;
     }
   }
 }

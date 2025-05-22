@@ -47,6 +47,11 @@
     "PastInterne": {
       "type": "text",
       "pluginOptions": {}
+    },
+    "WorkPhase": {
+      "type": "component",
+      "repeatable": true,
+      "component": "work-phase.work-phase"
     }
   }
 }

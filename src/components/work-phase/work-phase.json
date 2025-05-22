@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_paragraph_work_phases",
+  "collectionName": "components_work_phase_work_phases",
   "info": {
-    "displayName": "Work phase"
+    "displayName": "WorkPhase"
   },
   "options": {},
   "attributes": {

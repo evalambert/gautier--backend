@@ -400,6 +400,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    WorkPhase: Schema.Attribute.Component<'work-phase.work-phase', true>;
   };
 }
 
@@ -424,7 +425,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'api::homepage.homepage'
     > &
       Schema.Attribute.Private;
-    Project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
+    projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -446,11 +447,13 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   attributes: {
     Area: Schema.Attribute.Integer;
     Blueprint: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    City: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Credit: Schema.Attribute.String;
     Description: Schema.Attribute.Text;
+    District: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -461,9 +464,8 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    Place: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    Slug: Schema.Attribute.UID<'Title'>;
+    Slug: Schema.Attribute.UID<'Title'> & Schema.Attribute.Required;
     Title: Schema.Attribute.String;
     Typologie: Schema.Attribute.Relation<
       'oneToOne',
@@ -472,7 +474,14 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Year: Schema.Attribute.BigInteger;
+    Year: Schema.Attribute.BigInteger &
+      Schema.Attribute.SetMinMax<
+        {
+          max: '4';
+          min: '4';
+        },
+        string
+      >;
   };
 }
 
@@ -480,7 +489,7 @@ export interface ApiTypologieTypologie extends Struct.CollectionTypeSchema {
   collectionName: 'typologies';
   info: {
     description: '';
-    displayName: 'Typologie';
+    displayName: 'Typology';
     pluralName: 'typologies';
     singularName: 'typologie';
   };
