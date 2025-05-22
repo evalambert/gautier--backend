@@ -1,17 +1,18 @@
 {
   "collectionName": "components_work_phase_work_phases",
   "info": {
-    "displayName": "WorkPhase"
+    "displayName": "WorkPhase",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Duration": {
+    "duration": {
       "type": "string"
     }
   }
