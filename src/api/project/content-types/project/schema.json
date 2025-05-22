@@ -4,7 +4,7 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project",
+    "displayName": "project",
     "description": ""
   },
   "options": {
@@ -12,30 +12,30 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "pluginOptions": {}
     },
-    "City": {
+    "city": {
       "type": "string",
       "pluginOptions": {},
       "required": false
     },
-    "Year": {
+    "year": {
       "type": "biginteger",
       "pluginOptions": {},
       "max": "4",
       "min": "4"
     },
-    "Area": {
+    "area": {
       "type": "integer",
       "pluginOptions": {}
     },
-    "Description": {
+    "description": {
       "type": "text",
       "pluginOptions": {}
     },
-    "Media": {
+    "media": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -47,7 +47,7 @@
       ],
       "pluginOptions": {}
     },
-    "Blueprint": {
+    "blueprint": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -59,21 +59,20 @@
       ],
       "pluginOptions": {}
     },
-    "Credit": {
+    "credit": {
       "type": "string",
       "pluginOptions": {}
     },
-    "Typologie": {
+    "typologie": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::typologie.typologie"
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
-      "targetField": "Title",
       "required": true
     },
-    "District": {
+    "district": {
       "type": "string"
     }
   }

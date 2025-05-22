@@ -12,43 +12,43 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Bio": {
+    "bio": {
       "type": "text",
       "pluginOptions": {}
     },
-    "Email": {
+    "email": {
       "type": "email",
       "pluginOptions": {}
     },
-    "Phone": {
+    "phone": {
       "type": "string",
       "pluginOptions": {}
     },
-    "Adress": {
+    "adress": {
       "type": "string",
       "pluginOptions": {}
     },
-    "Instagram": {
+    "instagram": {
       "type": "string",
       "pluginOptions": {}
     },
-    "CurrentCollab": {
+    "currentCollab": {
       "type": "text",
       "pluginOptions": {}
     },
-    "PastCollab": {
+    "pastCollab": {
       "type": "text",
       "pluginOptions": {}
     },
-    "CurrentInterne": {
+    "currentInterne": {
       "type": "text",
       "pluginOptions": {}
     },
-    "PastInterne": {
+    "pastInterne": {
       "type": "text",
       "pluginOptions": {}
     },
-    "WorkPhase": {
+    "workPhase": {
       "type": "component",
       "repeatable": true,
       "component": "work-phase.work-phase"

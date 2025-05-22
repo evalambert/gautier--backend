@@ -381,26 +381,26 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Adress: Schema.Attribute.String;
-    Bio: Schema.Attribute.Text;
+    adress: Schema.Attribute.String;
+    bio: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    CurrentCollab: Schema.Attribute.Text;
-    CurrentInterne: Schema.Attribute.Text;
-    Email: Schema.Attribute.Email;
-    Instagram: Schema.Attribute.String;
+    currentCollab: Schema.Attribute.Text;
+    currentInterne: Schema.Attribute.Text;
+    email: Schema.Attribute.Email;
+    instagram: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
       Schema.Attribute.Private;
-    PastCollab: Schema.Attribute.Text;
-    PastInterne: Schema.Attribute.Text;
-    Phone: Schema.Attribute.String;
+    pastCollab: Schema.Attribute.Text;
+    pastInterne: Schema.Attribute.Text;
+    phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    WorkPhase: Schema.Attribute.Component<'work-phase.work-phase', true>;
+    workPhase: Schema.Attribute.Component<'work-phase.work-phase', true>;
   };
 }
 
@@ -437,7 +437,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
     description: '';
-    displayName: 'Project';
+    displayName: 'project';
     pluralName: 'projects';
     singularName: 'project';
   };
@@ -445,36 +445,36 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Area: Schema.Attribute.Integer;
-    Blueprint: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    City: Schema.Attribute.String;
+    area: Schema.Attribute.Integer;
+    blueprint: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    city: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Credit: Schema.Attribute.String;
-    Description: Schema.Attribute.Text;
-    District: Schema.Attribute.String;
+    credit: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    district: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::project.project'
     > &
       Schema.Attribute.Private;
-    Media: Schema.Attribute.Media<
+    media: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
     publishedAt: Schema.Attribute.DateTime;
-    Slug: Schema.Attribute.UID<'Title'> & Schema.Attribute.Required;
-    Title: Schema.Attribute.String;
-    Typologie: Schema.Attribute.Relation<
+    slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    title: Schema.Attribute.String;
+    typologie: Schema.Attribute.Relation<
       'oneToOne',
       'api::typologie.typologie'
     >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Year: Schema.Attribute.BigInteger &
+    year: Schema.Attribute.BigInteger &
       Schema.Attribute.SetMinMax<
         {
           max: '4';
@@ -506,7 +506,7 @@ export interface ApiTypologieTypologie extends Struct.CollectionTypeSchema {
       'api::typologie.typologie'
     > &
       Schema.Attribute.Private;
-    Name: Schema.Attribute.String;
+    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
