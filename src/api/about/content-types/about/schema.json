@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "bio": {
-      "type": "text",
-      "pluginOptions": {}
-    },
     "email": {
       "type": "email",
       "pluginOptions": {}
@@ -52,6 +48,9 @@
       "type": "component",
       "repeatable": true,
       "component": "work-phase.work-phase"
+    },
+    "bio": {
+      "type": "text"
     }
   }
 }
