@@ -74,6 +74,9 @@
     },
     "district": {
       "type": "string"
+    },
+    "peb": {
+      "type": "string"
     }
   }
 }
